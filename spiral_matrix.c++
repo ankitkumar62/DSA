@@ -3,16 +3,17 @@ using namespace std;
 int main()
 {
     int n;
+    int i;
     cin >> n;
     int mat[n][n];
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
             cin >> mat[i][j];
         }
     }
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
@@ -26,13 +27,13 @@ int main()
     while (top <= bottom && left <= right)
     {
 
-        for (int i = left; i <= right; i++)
+        for ( i = left; i <= right; i++)
         {
             cout << mat[top][i] << " ";
         }
         top++;
 
-        for (int i = top; i <= bottom; i++)
+        for ( i = top; i <= bottom; i++)
         {
             cout << mat[i][right] << " ";
         }
@@ -49,7 +50,7 @@ int main()
 
         if (left <= right)
         {
-            for (int i = bottom; i >= top; i--)
+            for ( i = bottom; i >= top; i--)
             {
                 cout << mat[i][left] << " ";
             }
